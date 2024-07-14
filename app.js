@@ -102,6 +102,16 @@ let mssgArr = [
 ]
 const worksArr = [
   {
+    name: 'Perfect Resume',
+    img: './Assets/img/perfect-resume.jpg',
+    link: 'https://perfect-resume.crafted-concepts.tech/'
+  },
+  {
+    name: 'CogniGuard',
+    img: './Assets/img/cogniguard.png',
+    link: 'https://github.com/AmanSingh494/CogniGaurd'
+  },
+  {
     name: 'Foodie website',
     img: './Assets/img/foodie.png',
     link: 'https://amansingh494.github.io/Foodie-Website/'
@@ -163,22 +173,20 @@ window.addEventListener('scroll', async () => {
 })
 // horizontal scroll js logic
 leftArrow.addEventListener('click', () => {
-  console.log(itemNo)
   if (itemNo > 0) {
     itemNo--
     works.scroll(itemNo * 955, 0)
   } else if (itemNo === 0) {
     itemNo = worksArr.length
     works.scroll(itemNo * 955, 0)
-    itemNo = 3
+    itemNo = 5
   }
 })
 rightArrow.addEventListener('click', () => {
-  console.log(itemNo)
-  if (itemNo < 3) {
+  if (itemNo < 5) {
     itemNo++
     works.scroll(itemNo * 955, 0)
-  } else if (itemNo === 3) {
+  } else if (itemNo === 5) {
     works.scroll(0, 0)
     itemNo = 0
   }
